@@ -20,3 +20,8 @@ Acteurs :
 ## Données
 - [incidents_details_maps](http://cdfdata.fire.ca.gov/incidents/incidents_details_maps?incident_id=1922)
 https://hal.archives-ouvertes.fr/file/index/docid/287987/filename/Les_simulations_de_propagation_de_feu_en_milieu_urbain.pdf
+
+Remarque : -Prendre en compte le relief : Nous allons prendre en compte la carte topographique de la Californie en fonction de l'incendie.
+-Choisir un sujet réel comme sujet : Nous avons pris l'incendie Thomas en Californie de Décembre 2017.
+
+La semaine prochaine : nous comptons commencer à programmer, afin de visualiser nos resemblances et différences par rapport au sujet réel.
