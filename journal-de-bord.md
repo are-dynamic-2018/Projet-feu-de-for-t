@@ -9,6 +9,8 @@ Paramètres :
 -Humidité
 -Température
 -Vent
+-Relief
+
 
 Acteurs : 
 -Pompiers
@@ -17,3 +19,4 @@ Acteurs :
 
 ## Données
 - [incidents_details_maps](http://cdfdata.fire.ca.gov/incidents/incidents_details_maps?incident_id=1922)
+https://hal.archives-ouvertes.fr/file/index/docid/287987/filename/Les_simulations_de_propagation_de_feu_en_milieu_urbain.pdf
