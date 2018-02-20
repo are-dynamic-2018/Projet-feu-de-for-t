@@ -24,4 +24,4 @@ https://hal.archives-ouvertes.fr/file/index/docid/287987/filename/Les_simulation
 Remarque : -Prendre en compte le relief : Nous allons prendre en compte la carte topographique de la Californie en fonction de l'incendie.
 -Choisir un sujet réel comme sujet : Nous avons pris l'incendie Thomas en Californie de Décembre 2017.
 
-La semaine prochaine : nous comptons commencer à programmer, afin de visualiser nos resemblances et différences par rapport au sujet réel.
+La semaine prochaine : nous comptons commencer à programmer, afin de visualiser nos resemblances et différences par rapport au sujet réel.Trouver une carte topographique de la Californie en fonction de l'incendie Thomas.
