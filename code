@@ -1,0 +1,49 @@
+import numpy as np
+from random import *
+import matplotlib.pyplot as plt
+
+L = 15
+
+Matrice  = np.random.rand(L,L)
+(long,larg) = Matrice.shape
+Matrice
+def foyer():
+    i = randint(1,L-2)
+    j = randint(1,L-2)
+    Matrice[i,j] = Matrice[i,j] + 1
+    return (i, j)
+    print(i, j)
+    
+i,j = foyer()
+i,j
+def propagation(i,j):
+    if Matrice[i,j] > 1 :
+        Matrice[i +1,j] = Matrice[i +1,j] +1
+        Matrice[i,j +1] = Matrice[i,j +1] +1
+        Matrice[i -1,j] = Matrice[i -1,j] +1
+        Matrice[i,j -1] = Matrice[i,j -1] +1
+    return Matrice
+propagation(i,j)
+Matrice
+def affiche_matrice(matrice):
+    (n,m) = matrice.shape
+    for i in range(n):
+        for j in range(m):
+            if matrice[i,j] < 1:
+                print("A", end="")
+            else:
+                print("F", end="")
+        print()
+def next_step(i,j):
+    for i in range(L-1):
+        for j in range(L-1):
+            propagation(i,j)
+    affiche_matrice(Matrice)    
+def simulation():
+    nb_pas = 10
+    affiche_matrice(Matrice)
+    print("")
+    for i in range (nb_pas):
+        next_step(i,j)
+        print("")
+simulation()            
