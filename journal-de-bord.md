@@ -8,20 +8,35 @@ Citation du lien ci-dessus :  Les conditions climatiques – vents et faible hum
 Paramètres : 
 -Humidité
 -Température
--Vent
+-Vent(direction)
 -Relief
 
 
-Acteurs : 
--Pompiers
+Agents : 
 -Arbres (sain/en feu/carbonisée)
 -Maisons
+-Lac
+
 
 ## Données
 - [incidents_details_maps](http://cdfdata.fire.ca.gov/incidents/incidents_details_maps?incident_id=1922)
 https://hal.archives-ouvertes.fr/file/index/docid/287987/filename/Les_simulations_de_propagation_de_feu_en_milieu_urbain.pdf
 
+-https://www.science-emergence.com/Articles/G%C3%A9n%C3%A9rer-un-tableau-matrice-de-nombres-al%C3%A9atoires-avec-numpy-de-python/ : Mettre un intervalle pour les valeurs de la matrice.
+
+
 Remarque : -Prendre en compte le relief : Nous allons prendre en compte la carte topographique de la Californie en fonction de l'incendie.
 -Choisir un sujet réel comme sujet : Nous avons pris l'incendie Thomas en Californie de Décembre 2017.
 
 La semaine prochaine : nous comptons commencer à programmer, afin de visualiser nos resemblances et différences par rapport au sujet réel.Trouver une carte topographique de la Californie en fonction de l'incendie Thomas.
+--------------------------------------------------PROJET-------------------------------------------------------------------------
+
+Thème : feu de forêt.
+
+Sujet réel : Incendie Thomas.
+
+Problématique : Comment se propage un feu de forêt?
+
+Principe :Nous pensions créer une carte, dans laquelle les différentes cases auront des valeurs qui varient en fonction de différents paramètres tels que la température, l'humidité, le relief.Ces paramètres seront dans un premier temps inspirés de l'incendie Thomas puis nous les feront varier un à un pour comprendre comment ces paramètres agissent sur un incendie.
+
+Fiche technique : Pour mettre à bien nous pensions utiliser une matrice de longueur et largeur L comme carte, puis nous selectionnerons une case comme foyer de l'incendie, cette case en interagira avec les autres de la carte en fonction du vent. Les arbres auront 3 états possibles : sain, en feu et carbonisée, ils ne pourront pas cumuler 2 états. D'autres cases seront mises en jeu telles que : les habitations et les sources d'eau, les habitations seront plus résistantes que les arbres et les sources d'eau ne peuvent ni être en feu, ni être carbonisée.Un bilan technique sera fait à la suite de la simulation afin de tirer des conclusions.
