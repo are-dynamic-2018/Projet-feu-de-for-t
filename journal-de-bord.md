@@ -14,8 +14,7 @@ Paramètres :
 
 Agents : 
 -Arbres (sain/en feu/carbonisée)
--Maisons
--Lac
+-eau
 
 
 ## Données
@@ -39,4 +38,4 @@ Problématique : Comment se propage un feu de forêt?
 
 Principe :Nous pensions créer une carte, dans laquelle les différentes cases auront des valeurs qui varient en fonction de différents paramètres tels que la température, l'humidité, le relief.Ces paramètres seront dans un premier temps inspirés de l'incendie Thomas puis nous les feront varier un à un pour comprendre comment ces paramètres agissent sur un incendie.
 
-Fiche technique : Pour mettre à bien nous pensions utiliser une matrice de longueur et largeur L comme carte, puis nous selectionnerons une case comme foyer de l'incendie, cette case en interagira avec les autres de la carte en fonction du vent. Les arbres auront 3 états possibles : sain, en feu et carbonisée, ils ne pourront pas cumuler 2 états. D'autres cases seront mises en jeu telles que : les habitations et les sources d'eau, les habitations seront plus résistantes que les arbres et les sources d'eau ne peuvent ni être en feu, ni être carbonisée.Un bilan technique sera fait à la suite de la simulation afin de tirer des conclusions.
+Fiche technique : Pour mettre à bien nous pensions utiliser une matrice de longueur et largeur L comme carte, puis nous selectionnerons une case comme foyer de l'incendie, cette case en interagira avec les autres de la carte en fonction du vent. Les arbres auront 3 états possibles : sain, en feu et carbonisée, ils ne pourront pas cumuler 2 états. D'autres cases seront mises en jeu telles que : les sources d'eau, les sources d'eau ne peuvent ni être en feu, ni être carbonisée.Un bilan technique sera fait à la suite de la simulation afin de tirer des conclusions.
