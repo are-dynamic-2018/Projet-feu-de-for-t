@@ -48,3 +48,18 @@ def simulation(Matrice):
         Matrice = next_step(Matrice,i,j)
         print("")
 simulation(Matrice)    
+    
+    
+    
+    
+    
+    
+    nouvelle_matrice[i +(Ventx+Venty),j] = ancienne_matrice[i +(Ventx+Venty),j] +1
+    nouvelle_matrice[i -(Ventx+Venty),j] = ancienne_matrice[i -(Ventx+Venty),j] +1
+    nouvelle_matrice[i,j +(Ventx+Venty)] = ancienne_matrice[i,j +(Ventx+Venty)] +1
+    nouvelle_matrice[i,j -(Ventx+Venty)] = ancienne_matrice[i,j -(Ventx+Venty)] +1
+    nouvelle_matrice[i +(Ventx+Venty),j+(Ventx+Venty)] = ancienne_matrice[i +(Ventx+Venty),j+(Ventx+Venty)] +1
+    nouvelle_matrice[i -(Ventx+Venty),j-(Ventx+Venty)] = ancienne_matrice[i -(Ventx+Venty),j-(Ventx+Venty)] +1
+    nouvelle_matrice[i +(Ventx+Venty),j-(Ventx+Venty)] = ancienne_matrice[i +(Ventx+Venty),j-(Ventx+Venty)] +1
+    nouvelle_matrice[i -(Ventx+Venty),j+(Ventx+Venty)] = ancienne_matrice[i -(Ventx+Venty),j+(Ventx+Venty)] +1
+    
