@@ -3,8 +3,7 @@ from random import *
 import matplotlib.pyplot as plt
 
 L = 15
-
-Matrice  = np.random.rand(L,L)
+Matrice  = np.zeros((L,L))
 (long,larg) = Matrice.shape
 Matrice
 def foyer():
@@ -15,35 +14,37 @@ def foyer():
     print(i, j)
     
 i,j = foyer()
-i,j
-def propagation(i,j):
-    if Matrice[i,j] > 1 :
-        Matrice[i +1,j] = Matrice[i +1,j] +1
-        Matrice[i,j +1] = Matrice[i,j +1] +1
-        Matrice[i -1,j] = Matrice[i -1,j] +1
-        Matrice[i,j -1] = Matrice[i,j -1] +1
-    return Matrice
-propagation(i,j)
-Matrice
-def affiche_matrice(matrice):
-    (n,m) = matrice.shape
+
+def propagation(ancienne_matrice, nouvelle_matrice, i,j):
+    if ancienne_matrice[i,j] >= 1 :
+        nouvelle_matrice[i +1,j] = ancienne_matrice[i +1,j] +1
+        nouvelle_matrice[i,j +1] = ancienne_matrice[i,j +1] +1
+        nouvelle_matrice[i -1,j] = ancienne_matrice[i -1,j] +1
+        nouvelle_matrice[i,j -1] = ancienne_matrice[i,j -1] +1
+        nouvelle_matrice[i,j] = 1
+    return nouvelle_matrice
+
+def affiche_matrice(Matrice):
+    (n,m) = Matrice.shape
     for i in range(n):
         for j in range(m):
-            if matrice[i,j] < 1:
+            if Matrice[i,j] < 1:
                 print("A", end="")
             else:
                 print("F", end="")
         print()
-def next_step(i,j):
+def next_step(Matrice, i,j):
+    new_mat = np.zeros((L,L))
     for i in range(L-1):
         for j in range(L-1):
-            propagation(i,j)
-    affiche_matrice(Matrice)    
-def simulation():
-    nb_pas = 10
+            propagation(Matrice, new_mat, i,j)
+    affiche_matrice(new_matMatrice)    
+    return new_mat
+def simulation(Matrice):
+    nb_pas = 20
     affiche_matrice(Matrice)
     print("")
     for i in range (nb_pas):
-        next_step(i,j)
+        Matrice = next_step(Matrice,i,j)
         print("")
-simulation()            
+simulation(Matrice)    
