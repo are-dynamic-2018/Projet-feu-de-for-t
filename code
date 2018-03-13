@@ -63,3 +63,36 @@ simulation(Matrice)
     nouvelle_matrice[i +(Ventx+Venty),j-(Ventx+Venty)] = ancienne_matrice[i +(Ventx+Venty),j-(Ventx+Venty)] +1
     nouvelle_matrice[i -(Ventx+Venty),j+(Ventx+Venty)] = ancienne_matrice[i -(Ventx+Venty),j+(Ventx+Venty)] +1
     
+    %matplotlib notebook
+from pylab import *
+import numpy as np
+
+def simulation(Matrice):
+    nb_pas = 20
+    affiche_matrice(Matrice)
+    print("")
+    for k in range (nb_pas):
+        Matrice = next_step(Matrice)
+        affiche_matrice(Matrice)
+        print("")
+simulation(Matrice)
+
+import matplotlib.pyplot as plt
+size = np.array(Matrice.shape)
+dpi = 20
+figsize= size[1]/float(dpi),size[0]/float(dpi)
+fig = plt.figure(figsize = figsize, dpi = dpi, facecolor = "white")
+fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon = False)
+im=plt.imshow(cells, interpolation = 'nearest', cmap = plt.cm.gray_r)
+plt.xticks([]), plt.yticks([])
+
+import matplotlib.animation as animation
+
+def update(*args):
+    simulation(Matrice)
+    im.set_array(Matrice)
+    return [im]
+
+ani = animation.FuncAnimation(fig, update, frames=range(20), interval=50)
+plt.show()
+    
