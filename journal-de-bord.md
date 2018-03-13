@@ -50,10 +50,10 @@ Fiche technique : Pour mettre à bien nous pensions utiliser une matrice de long
 objectifs réussis : -Arbre peut être sain , en feu ou carbonisée.
                   -Le feu est guidé par le vent.
                   -Les calculs sont bons.
-
+                  -Cases vides.
 
 
 
 Ce qu'il nous manque : -Utilisation de nouveaux paramètres (température,humidité,relief).
                        -Animations.
-                       -Cases neutres.
+                       
