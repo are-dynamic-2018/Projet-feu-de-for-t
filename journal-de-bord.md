@@ -46,10 +46,14 @@ Fiche technique : Pour mettre à bien nous pensions utiliser une matrice de long
 [1er notebook](https://github.com/are-dynamic-2018/Projet-feu-de-foret/blob/master/Projet.ipynb)
 
 
-## Objectif
-objectif réussi : -Arbre peut être sain , en feu ou carbonisée.
+## Objectifs
+objectifs réussis : -Arbre peut être sain , en feu ou carbonisée.
                   -Le feu est guidé par le vent.
                   -Les calculs sont bons.
+
+
+
+
 Ce qu'il nous manque : -Utilisation de nouveaux paramètres (température,humidité,relief).
                        -Animations.
                        -Cases neutres.
