@@ -41,6 +41,15 @@ Principe :Nous pensions créer une carte, dans laquelle les différentes cases a
 Fiche technique : Pour mettre à bien nous pensions utiliser une matrice de longueur et largeur L comme carte, puis nous selectionnerons une case comme foyer de l'incendie, cette case en interagira avec les autres de la carte en fonction du vent. Les arbres auront 3 états possibles : sain, en feu et carbonisée, ils ne pourront pas cumuler 2 états. D'autres cases seront mises en jeu telles que : les sources d'eau, les sources d'eau ne peuvent ni être en feu, ni être carbonisée.Un bilan technique sera fait à la suite de la simulation afin de tirer des conclusions.
 
 
-### Mardi 13 mars
+## Notebook
 
 [1er notebook](https://github.com/are-dynamic-2018/Projet-feu-de-foret/blob/master/Projet.ipynb)
+
+
+## Objectif
+objectif réussi : -Arbre peut être sain , en feu ou carbonisée.
+                  -Le feu est guidé par le vent.
+                  -Les calculs sont bons.
+Ce qu'il nous manque : -Utilisation de nouveaux paramètres (température,humidité,relief).
+                       -Animations.
+                       -Cases neutres.
