@@ -28,7 +28,7 @@ Remarque : -Prendre en compte le relief : Nous allons prendre en compte la carte
 -Choisir un sujet réel comme sujet : Nous avons pris l'incendie Thomas en Californie de Décembre 2017.
 
 La semaine prochaine : nous comptons commencer à programmer, afin de visualiser nos resemblances et différences par rapport au sujet réel.Trouver une carte topographique de la Californie en fonction de l'incendie Thomas.
---------------------------------------------------PROJET-------------------------------------------------------------------------
+## PROJET
 
 Thème : feu de forêt.
 
