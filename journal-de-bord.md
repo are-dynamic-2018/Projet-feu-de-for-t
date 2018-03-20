@@ -56,4 +56,8 @@ objectifs réussis : -Arbre peut être sain , en feu ou carbonisée.
 
 Ce qu'il nous manque : -Utilisation de nouveaux paramètres (température,humidité,relief).
                        -Animations.
+
+# Mardi 20 Mars
+Nous avons tenté en vain une visualisation 
+La séance prochaine nous comptons compter les arbres en feu , les arbres sains et ceux consumés.
                        
