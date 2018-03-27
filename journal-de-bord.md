@@ -61,3 +61,5 @@ Ce qu'il nous manque : -Utilisation de nouveaux paramètres (température,humidi
 Nous avons tenté en vain une visualisation 
 La séance prochaine nous comptons compter les arbres en feu , les arbres sains et ceux consumés.
                        
+# Mardi 27 Mars
+Nous avons reussis a faire l'animation, la semaine prochaine nous effectuerons les modifications concernant le parametre vent ainsi que la question du notre problematique.
