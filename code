@@ -96,3 +96,112 @@ def update(*args):
 ani = animation.FuncAnimation(fig, update, frames=range(20), interval=50)
 plt.show()
     
+    
+    
+    
+    L'animation de la simulation
+    
+    # Modifier la fonction Simulation
+    
+    def simulation(Matrice):
+    nb_pas = 1000
+    history = []
+    history.append(Matrice.copy())
+    affiche_matrice(Matrice)
+    print("")
+    for k in range (nb_pas):
+        Matrice = next_step(Matrice)
+        history.append(Matrice.copy())
+
+        affiche_matrice(Matrice)
+        print("")
+    return history
+    
+    simulation(Matrice)
+    
+    #premier visualisation
+    
+    import matplotlib.pyplot as plt
+    import matplotlib.animation as anim
+    from IPython.display import HTML
+    import numpy as np
+    %matplotlib notebook
+    %matplotlib notebook
+    
+    results = simulation(Matrice)
+    
+    results
+    
+    fig = plt.figure()
+    im=plt.imshow(results[0], interpolation = 'none', cmap = plt.cm.gray_r)
+    plt.xticks([]), plt.yticks([])
+    
+    len(results)
+    
+    def update(i):
+    im.set_array(results[i])
+    return [im]
+
+    ani = anim.FuncAnimation(fig, update, interval=300)
+    plt.show()
+    
+    from matplotlib.colors import ListedColormap, Normalize
+    
+    colors = ["blue",   #gris (cendre)
+          "green",   # bleu (espace d'eau)
+          "red",  # Vert (espace d'eau)
+          "grey"]    # Rouge (enfeu)
+    cmap = ListedColormap(colors)
+    
+    fig = plt.figure()
+    norm = Normalize(vmin = -1, vmax = 2, clip = False)
+    im=plt.imshow(results[0], interpolation = 'nearest',
+              cmap = cmap,
+              norm = norm)
+    plt.xticks([]), plt.yticks([])
+    
+    results
+    
+    def update(i):
+    im.set_array(results[i])
+    return [im]
+
+    ani = anim.FuncAnimation(fig, update, interval=300)
+    plt.show()
+    
+    import matplotlib.patches as mpatches
+    
+    couleur_saint = "green"
+    couleur_enfeu = "red"
+    couleur_cendre = "grey"
+    colors = ["blue",couleur_saint, couleur_saint,couleur_enfeu, couleur_cendre]
+    cmap = ListedColormap(colors)
+    patch1 = mpatches.Patch(color=couleur_saint, label='saint')
+    patch2 = mpatches.Patch(color=couleur_cendre, label='cendre')
+    patch3 = mpatches.Patch(color=couleur_enfeu, label='enfeu')
+    
+    fig = plt.figure()
+    norm = Normalize(vmin = -1, vmax = 2, clip = False)
+    im=plt.imshow(results[0], interpolation = 'nearest',
+              cmap = cmap,
+              norm = norm)
+    plt.xticks([]), plt.yticks([])
+    plt.title("Simulation d'une feu de foret")
+    plt.legend(handles=[patch1, patch2, patch3],bbox_to_anchor=(1, 1, 0., 0), loc="upper left")
+    
+    def update(i):
+    im.set_array(results[i])
+    return [im]
+
+    ani = anim.FuncAnimation(fig, update, interval=300)
+    plt.show()
+
+
+
+    
+    
+    
+    
+    
+    
+    
