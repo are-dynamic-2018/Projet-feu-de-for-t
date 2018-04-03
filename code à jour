@@ -75,7 +75,12 @@ plt.ylabel("proba")
 plt.show()
 
 
-
+def filter_proba(p):
+    p = p
+    return p
+    
+    
+    
 def matrice_proba(ventx, venty):
     p = np.zeros((3, 3))
     i_0, j_0 = 0.75, 1.0
@@ -112,29 +117,7 @@ def propa(ancienne_matrice,nouvelle_matrice,p,i,j):
     return nouvelle_matrice
     
     
-    
-def propagation_feu(ancienne_matrice, nouvelle_matrice, i,j):
-
-    choix = randint(1,16)
-    nouvelle_matrice[i,j] = ancienne_matrice[i,j]
-    if 0 <= nouvelle_matrice[i,j] < 2:
-        if choix >= 1 and choix <= 8:
-            nouvelle_matrice[i,j +(Ventx+Venty)] = ancienne_matrice[i,j +(Ventx+Venty)] +1
-            nouvelle_matrice[i,j -(Ventx+Venty)] = ancienne_matrice[i,j -(Ventx+Venty)] +1 
-            nouvelle_matrice[i,j] = nouvelle_matrice[i,j] + (1/2)
-            nouvelle_matrice[i +Ventx,j +Venty] = ancienne_matrice[i +Ventx,j +Venty] +1
-        elif choix > 8 and choix <= 12:
-            nouvelle_matrice[i +(Ventx+Venty),j+(Ventx+Venty)] = ancienne_matrice[i +(Ventx+Venty),j+(Ventx+Venty)] +1
-            nouvelle_matrice[i -(Ventx+Venty),j-(Ventx+Venty)] = ancienne_matrice[i -(Ventx+Venty),j-(Ventx+Venty)] +1
-            nouvelle_matrice[i,j] = nouvelle_matrice[i,j] + (1/2)
-            nouvelle_matrice[i +Ventx,j +Venty] = ancienne_matrice[i +Ventx,j +Venty] +1
-        elif choix == 13 :
-            nouvelle_matrice[i +(Ventx+Venty),j] = ancienne_matrice[i +(Ventx+Venty),j] +1
-            nouvelle_matrice[i,j] = nouvelle_matrice[i,j] + (1/2)
-            nouvelle_matrice[i +Ventx,j +Venty] = ancienne_matrice[i +Ventx,j +Venty] +1
-        #else:
-        #    nouvelle_matrice[i,j] = nouvelle_matrice[i,j] + (1/2)
-    return nouvelle_matrice
+   
 
 def propagation_vide(ancienne_matrice, nouvelle_matrice, i, j):
     assert ancienne_matrice[i,j] < 0, "Cette fonction ne doit être appelée que pour des cases vides"
@@ -147,15 +130,15 @@ def affiche_matrice(Matrice):
     (n,m) = Matrice.shape
     for i in range(2,n-1) :
         for j in range(2,m-1) :
-            if 0 <= Matrice[i,j] < 1 :
+            if Matrice[i,j] ==0 :
                 print("A", end="")
             elif Matrice[i, j] >= 1 and Matrice[i, j] < 2 :
                 print("F", end="")
             elif Matrice[i, j] >= 2 :
                 print(".", end="")
             elif Matrice[i,j] < 0 :
-                print(' ',end="")
-        print()
+                print(" ",end="")
+        print("")
         
         
    
@@ -163,23 +146,12 @@ def next_step(Matrice):
     new_mat = np.zeros((L,L))
     for i in range(2,L-1):
         for j in range(2,L-1):
-            if Matrice[i, j] >= 1:
-                propagation_feu(Matrice, new_mat, i, j)
-            elif Matrice[i,j] < 0:
-                propagation_vide(Matrice, new_mat, i, j)
+            
+            propagation_feu(Matrice, new_mat, i, j)
+           
     return new_mat
   
  
-def matricenorm(ancienne_matrice,nouvelle_matrice,i,j) :
-    if ancienne_matrice[i,j] < 0:
-        nouvelle_matrice[i,j] = 0
-    elif 0 <= ancienne_matrice[i,j] < 1 :
-        nouvelle_matrice[i,j] = 1
-    elif 1 <= ancienne_matrice[i,j] < 2 :
-        nouvelle_matrice[i,j] = 2
-    elif ancienne_matrice[i,j] >= 2 :
-        nouvelle_matrice[i,j] = 3
-    return nouvelle_matrice
     
    
 Matrice  = np.zeros((L,L))
