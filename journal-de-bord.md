@@ -63,3 +63,9 @@ La séance prochaine nous comptons compter les arbres en feu , les arbres sains 
                        
 # Mardi 27 Mars
 Nous avons reussis a faire l'animation, la semaine prochaine nous effectuerons les modifications concernant le parametre vent ainsi que la question du notre problematique.
+# certaines conditions meteorologiques
+-faible humidité
+-vent fort et chaud avec une vitesse 60Km/h nommée Santa Ana
+-espace detruite 1100km carre
+
+
