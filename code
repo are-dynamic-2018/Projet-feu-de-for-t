@@ -197,7 +197,19 @@ plt.show()
     plt.show()
 
 
-
+def propa(ancienne_matrice,nouvelle_matrice,p,i,j):
+    if is_in_fire(ancienne_matrice[i,j]):  # i.e. elle est en feu        
+        for di in [-1, 0 ,+1]:
+            for dj in [-1, 0,+1]:
+                if ancienne_matrice[i +di,j +dj] == 0: # si arbre sain
+                    x = np.random.binomial(1, p[di+1, dj+1])
+                    nouvelle_matrice[di +i, dj +j] = x
+                else :
+                    nouvelle_matrice[i +di, j+dj] = ancienne_matrice[i +di,j +dj]
+        nouvelle_matrice[i,j] = nouvelle_matrice[i,j] + (1/2)
+    else :
+        nouvelle_matrice[i,j] = ancienne_matrice[i,j]  # Copier l'ancienne matrice dans la nouvelle
+    return nouvelle_matrice
     
     
     
